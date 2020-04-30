@@ -1,0 +1,459 @@
+/* 
+    main.css - General reset and layout styles
+    By Isaac Ingles
+
+    I have included comments throughout to demonstrate my knowledge of 
+    CSS and general best practices (so far as I am aware, it's been 8 years).
+
+    CSS "cascades", meaning that styles at the bottom of the stylesheet take 
+    precedence over styles at the top -- excepting  styles labeled with "!important", 
+    or inline styles; neither of which I would use unless absolutely necessary.
+    (This is of course challenged by the patterns seen in many modern front-end 
+    JS frameworks, where much of the styling is done inline; but lets keep things
+    simiple, shall we?)
+*/
+
+/* 
+    REM font size reset, so that I only have to deal with multiples of 10
+    for responsive sizes. (REM = "Root Element")
+
+    Also add a smooth scroll behavior because aesthetics.
+*/
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* 
+    General resets (Just cause I don't want to wrestle with stupid stuff) 
+    This takes the default paddings, margins, etc off of things so I can just define 
+    them on my own.
+
+    Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain) 
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+}
+
+mark {
+    background-color: transparent;
+    color: inherit;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input, select, textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+/* 
+    Font Stack, additional/general body styles
+    (for fonts, the browser will try to load the first font specified,
+    and continue down the line until it finds the first one that it can use).
+*/
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+}
+
+/* 
+    Layout
+
+    I'm using Bootstrap class names, mostly because they make the most sense as far,
+    as semantic layout design; but also so that you can sort of understand what I'm 
+    trying to do with them (assuming you're familiar with Bootstrap).  
+
+    I'm going to do my layout with a "mobile first" approach, meaning I'm going to design
+    with min-widths for my media queries and most of my default CSS is going to be
+    geared towards smaller screens.  Once again, I'll use the same breakpoints as Bootstrap,
+    to try and make things consistent.
+
+    I'm doing things this way in part to make it easier to manage in the long run, and in part
+    to challenge myself to see how well I can build a responsive layout all on my own.
+*/
+
+/* Flexbox */
+
+.d-flex {
+    display: flex;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.align-self-start {
+    align-self: flex-start
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-end {
+    align-self: flex-end
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.justify-self-start {
+    justify-self: flex-start;
+}
+
+.justify-self-center {
+    justify-self: center;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* Z-Indexes -- Keep desired elements "on top" */
+
+.z-fixed {
+    z-index: 1030;
+}
+
+/* Headings */
+
+h1 {
+    font-size: 3.2rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 2.4rem;
+    margin: .5rem 0;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: .5rem 0;
+}
+
+h4 {
+    font-size: 1.8rem;
+    margin: .5rem 0;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    color: #fff;
+    padding: .8rem 2rem;
+    background: #000;
+    box-shadow: 1px 1px 1px #000;
+}
+
+.navbar.fixed {
+    position: fixed;
+}
+
+.navbar a {
+    margin: 0 .5rem;
+    padding: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*
+    Navbar media queries
+*/
+
+@media screen and (min-width: 576px) {
+    .navbar {
+        padding: .9rem 4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        padding: 1.2rem 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar {
+        padding: 1.5rem 3rem;
+    }
+}
+
+/* Containers - generic container elements  */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container.fluid {
+    width: 100%;
+    margin: 0;
+}
+
+/*
+    Container media queries
+*/
+
+@media screen and (min-width: 576px) {
+    .container {
+        width: 80%
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 70%
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 80%
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 80%
+    }
+}
+
+/* 
+    Jumbotrons
+*/
+
+.jumbotron {
+    padding: .5rem;
+}
+
+/*
+    Jumbotron media queries
+*/
+
+@media screen and (min-width: 576px) {
+    .jumbotron {
+        padding: .7rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding: .8rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .jumbotron {
+        padding: .9rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .jumbotron {
+        padding: 1rem;
+    }
+}
+
+.jumbotron.top {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.jumbotron.top .section-header {
+    text-align: left;
+}
+
+.jumbotron.dark {
+    background: #374b9b;
+    color: #fff;
+}
+
+.hero {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* 
+    Jumbotron media queries
+*/
+
+@media screen and (min-width: 576px) {
+    .hero {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        font-size: 4.8rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero {
+        font-size: 5.2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        font-size: 5.6rem;
+    }
+}
+
+/* 
+    Section Headers
+*/
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 
+    Code blocks
+*/
+
+pre.code-block {
+    /* display: block; */
+    background: #cfcfff;
+    padding: 1rem;
+}
+
+code {
+    font-family: 'Fira Code', 'Lucida Console', monospace;
+    font-size: .65rem;
+}
+
+/* 
+    code Media Queries
+*/
+
+@media screen and (min-width: 576px) {
+    code {
+        font-size: .68rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    code {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    code {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    code {
+        font-size: 1rem;
+    }
+}
+
+code .comment {
+    color: #57b33b;
+}
+
+.image-wrapper .img {
+    background-image: url(../images/tim-berners-lee-200.jpg);
+}
+
+@media (min-width: 768px) {
+    .image-wrapper .img {
+        background-image: url(../images/tim-berners-lee-300.jpg);
+    }
+}
+
+@media (min-width: 992px) {
+    .image-wrapper .img {
+        background-image: url(../images/tim-berners-lee-400.jpg);
+    }
+}

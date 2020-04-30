@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DGM 1600 Competencies</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Using a better font because the defaults are ugly -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 
+            I'm using Bootstrap class names mostly cause I like them and they make sense.
+            I'm not actually using boostrap; I'm doing this all in vanilla HTML/CSS.
+        -->
+    <nav class="navbar fixed">
+        <a href="#top-section">Top</a>|
+        <a href="#html-basics">HTML Basics</a>
+    </nav>
+    <section class="jumbotron top dark" id="top-section">
+        <div class="container d-flex flex-column">
+            <header class="section-header">
+                <h1 class="hero">DGM 1600 Competencies</h1>
+                <h3>By Isaac Ingles</h3>
+            </header>
+        </div>
+    </section>
+    <section class="jumbotron" id="html-basics">
+        <div class="container">
+            <header class="section-header">
+                <h1>HTML basics</h1>
+                <p>HTML is a &quot;markup language&quot;. In computer science, a markup language is defined as a
+                    computer language that uses &quot;tags&quot; to define elements within a document.</p>
+            </header>
+            <h3>HTML Example:</h3>
+            <pre class="code-block"><code class="language-html">&lt;p&gt;This is an example of the usage of paragraph tags in HTML.&lt;/p&gt;
+<span class="comment">&lt; !-- This is an example of an HTML comment. -- &gt;</span></code></pre>
+            <p>HTML was developed in the early 1990s by <a title="wikipedia article about Tim Berners-Lee" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee.</a></p>
+            <!-- The <picture> element is NOT compatable with IE, but it helps a lot when it comes to responsive images. -->
+            <picture class="image-wrapper">
+                <source srcset="../images/tim-berners-lee-300.jpg" media="(min-width: 768px)" type="image/jpg">
+                <source srcset="../images/tim-berners-lee-400.jpg" media="(min-width: 992px)" type="image/jpg">
+                <img srcset="../images/tim-berners-lee-200.jpg"
+                    alt="photo of Tim Berners-Lee">
+            </picture>
+            
+        </div>
+    </section>
+</body>
+
+</html>
