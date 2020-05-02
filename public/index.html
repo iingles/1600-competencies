@@ -67,7 +67,7 @@
             </p>
             <p>
                 One interesting thing that a person learning HTML and CSS should know is that the
-                (<code>&lt;img&gt;</code>) tag in HTML is actually a &quot;replaced element&quot; &mdash; this means
+                <code>&lt;img&gt;</code> tag in HTML is actually a &quot;replaced element&quot; &mdash; this means
                 that it is rendered outside of the scope of CSS. Put in simpler terms, replaced elements are elements
                 whose contents are not affected by the current document's styles. The position of
                 the replaced element can be affected using CSS, but not the contents of the replaced element itself.
@@ -89,15 +89,30 @@
 
 }
             </code></pre>
-            <p>CSS (Cascading Style Sheets) are the primary (and preferred) way by which the appearance of a webpage's markup is displayed in the browser.  CSS can be used to improve the readability as well as overall aesthetic appearance of a website.  It is implemented through a huge variety of "selectors", which can be the HTML element itself, a class name, an ID name, and various pseudo-classes.  </p>
+            <p>CSS was first proposed by <a href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie">Håkon Wium Lie</a>, a contemporary of Tim Berners Lee, at CERN, in 1994. </p>
             <div class="image-wrapper img-two right clearfix">
                 <picture>
-                    <source srcset="../images/Hakon-Wium-Lie-300.jpg" media="(min-width: 768px)" type="image/jpg">
-                    <source srcset="../images/Hakon-Wium-Lie-400.jpg" media="(min-width: 992px)" type="image/jpg">
-                    <img srcset="../images/Hakon-Wium-Lie-200.jpg" alt="photo of Hakon Wium Lie">
+                    <source srcset="images/Hakon-Wium-Lie-300.jpg" media="(min-width: 768px)" type="image/jpg">
+                    <source srcset="images/Hakon-Wium-Lie-400.jpg" media="(min-width: 992px)" type="image/jpg">
+                    <img srcset="images/Hakon-Wium-Lie-200.jpg" alt="photo of Hakon Wium Lie">
                 </picture>
-                <p class="img-desc">Hakon Wium Lie (Wikipedia)</p>
+                <p class="img-desc">Håkon Wium Lie (Wikipedia)</p>
             </div>
+                <p>
+                    CSS (Cascading Style Sheets) are the primary (and preferred) way by which the appearance of a webpage's
+                    markup is displayed in the browser. CSS can be used to improve the readability as well as overall
+                    aesthetic appearance of a website. It is implemented through a variety of "selectors", which can be
+                    the HTML element itself, a class name, an ID name, and various pseudo-classes. It can be implemented inine
+                    (as an HTML attribute), embedded in the HTML document itself using <code>&lt;style&gt; tags,</code> or, as
+                    external <code>*.css</code> files.
+                </p>
+                <p>
+                    CSS styles, as the name implies, "cascade" down the list of selectors, with the lowest selector taking precedence.
+                    This behavior can be overridden by the use of <code>!important</code>, or by the use of inline styles. Most
+                    developers
+                    abhor the use of <code>!important</code> unless absolutely necessary because it can cause many problems down the
+                    production pipeline.
+                </p>
         </div><!-- End container -->
     </section>
 
