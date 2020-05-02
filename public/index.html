@@ -22,6 +22,7 @@
             <a href="#top-section">Top</a>
             <a href="#html-basics">HTML Basics</a>
             <a href="#css-basics">CSS Basics</a>
+            <a href="#javascript-basics">JavaScript Basics</a>
         </div>
     </nav>
 
@@ -30,6 +31,7 @@
             <header class="section-header">
                 <h1 class="hero">DGM 1600 Competencies</h1>
                 <h3>By Isaac Ingles</h3>
+                <p>The three main building blocks of the web are HTML, CSS, and Javascript.</p>
             </header>
         </div>
     </section>
@@ -103,21 +105,42 @@
                 </picture>
                 <p class="img-desc">Håkon Wium Lie (Wikipedia)</p>
             </div>
+            <p>
+                CSS (Cascading Style Sheets) are the primary (and preferred) way by which the appearance of a webpage's
+                markup is displayed in the browser. CSS can be used to improve the readability as well as overall
+                aesthetic appearance of a website. It is implemented through a variety of "selectors", which can be
+                the HTML element itself, a class name, an ID name, and various pseudo-classes. It can be implemented inine
+                (as an HTML attribute), embedded in the HTML document itself using <code>&lt;style&gt; tags,</code> or, as
+                external <code>*.css</code> files.
+            </p>
+            <p>
+                CSS styles, as the name implies, "cascade" down the list of selectors, with the lowest selector taking precedence.
+                This behavior can be overridden by the use of <code>!important</code>, or by the use of inline styles. Most
+                developers
+                abhor the use of <code>!important</code> unless absolutely necessary because it can cause many problems down the
+                production pipeline.
+            </p>
+        </div><!-- End container -->
+    </section>
+
+    <section class="jumbotron" id="javascript-basics">
+        <div class="container">
+            <header class="section-header">
+                <h1>Javascript Basics</h1>
                 <p>
-                    CSS (Cascading Style Sheets) are the primary (and preferred) way by which the appearance of a webpage's
-                    markup is displayed in the browser. CSS can be used to improve the readability as well as overall
-                    aesthetic appearance of a website. It is implemented through a variety of "selectors", which can be
-                    the HTML element itself, a class name, an ID name, and various pseudo-classes. It can be implemented inine
-                    (as an HTML attribute), embedded in the HTML document itself using <code>&lt;style&gt; tags,</code> or, as
-                    external <code>*.css</code> files.
+                    Javascript is a "scripting" language. Scripting languages are defined as "mini" programming languages which can
+                    be
+                    executed without being compiled.
                 </p>
-                <p>
-                    CSS styles, as the name implies, "cascade" down the list of selectors, with the lowest selector taking precedence.
-                    This behavior can be overridden by the use of <code>!important</code>, or by the use of inline styles. Most
-                    developers
-                    abhor the use of <code>!important</code> unless absolutely necessary because it can cause many problems down the
-                    production pipeline.
-                </p>
+                <div class="image-wrapper img-three right clearfix">
+                    <picture>
+                        <source srcset="images/Brendan-Eich-300.jpg" media="(min-width: 768px)" type="image/jpg">
+                        <source srcset="images/Brendan-Eich-400.jpg" media="(min-width: 992px)" type="image/jpg">
+                        <img srcset="images/Brendan-Eich-200.jpg" alt="photo of Brendan Eich">
+                    </picture>
+                    <p class="img-desc">Brendan Eich (Wikipedia)</p>
+                </div>
+            </header>
         </div><!-- End container -->
     </section>
     <script src="scripts/menu.js"></script>

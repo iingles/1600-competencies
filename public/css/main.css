@@ -47,7 +47,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-    line-height: 1;
+    line-height: 1.9;
 }
 
 ol, ul {
@@ -208,6 +208,7 @@ p {
 h1 {
     font-size: 3.2rem;
     margin: 1rem 0;
+    line-height: 1;
 }
 
 h2 {
@@ -292,11 +293,9 @@ h4 {
         padding: 0;
         justify-content: center;
     }
-
     .top-hamburger {
         display: none;
     }
-
     .navbar .menu-items {
         position: static;
         visibility: visible;
@@ -320,7 +319,7 @@ h4 {
 /* Containers - generic container elements  */
 
 .container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -489,9 +488,23 @@ code .comment {
     background-image: url(../images/tim-berners-lee-200.jpg);
 }
 
+.image-wrapper .img-two .img {
+    background-image: url(../images/Hakon-Wium-Lie-200.jpg);
+}
+
+.image-wrapper .img-three .img {
+    background-image: url(../images/Brendan-Eich-200.jpg);
+}
+
 @media (min-width: 768px) {
     .image-wrapper .img-one .img {
         background-image: url(../images/tim-berners-lee-300.jpg);
+    }
+    .image-wrapper .img-two .img {
+        background-image: url(../images/Hakon-Wium-Lie-300.jpg);
+    }
+    .image-wrapper .img-two .img {
+        background-image: url(../imagesBrendan-Eich-300.jpg);
     }
 }
 
@@ -499,21 +512,11 @@ code .comment {
     .image-wrapper .img-one .img {
         background-image: url(../images/tim-berners-lee-400.jpg);
     }
-}
-
-.image-wrapper .img-two .img {
-    background-image: url(../images/Hakon-Wium-Lie-200.jpg);
-}
-
-@media (min-width: 768px) {
-    .image-wrapper .img-two .img {
-        background-image: url(../images/Hakon-Wium-Lie-300.jpg);
-    }
-}
-
-@media (min-width: 992px) {
     .image-wrapper .img-two .img {
         background-image: url(../images/Hakon-Wium-Lie-400.jpg);
+    }
+    .image-wrapper .img-three .img {
+        background-image: url(../images/Brendan-Eich-400.jpg);
     }
 }
 
