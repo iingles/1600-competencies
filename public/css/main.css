@@ -161,6 +161,14 @@ p {
     align-items: flex-end;
 }
 
+.align-evenly {
+    align-items: space-evenly;
+}
+
+.align-between {
+    align-items: space-between;
+}
+
 .justify-self-start {
     justify-self: flex-start;
 }
@@ -185,11 +193,11 @@ p {
     justify-content: flex-end;
 }
 
-.justify-space-between {
+.justify-between {
     justify-content: space-between;
 }
 
-.justify-space-around {
+.justify-around {
     justify-content: space-around;
 }
 
@@ -228,9 +236,9 @@ h4 {
 /* Navbar */
 
 .navbar {
+    flex-direction: column;
     width: 100%;
     color: #fff;
-    padding: .8rem 2rem;
     background: #000;
     box-shadow: 1px 1px 1px #000;
 }
@@ -240,11 +248,15 @@ h4 {
 }
 
 .navbar a {
-    margin: 0 .5rem;
-    padding: 0 1rem;
+    padding: 1rem;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+}
+
+.navbar a:hover {
+    background: #ccc;
+    color: #000;
 }
 
 /*
@@ -252,26 +264,22 @@ h4 {
 */
 
 @media screen and (min-width: 576px) {
-    .navbar {
-        padding: .9rem 4rem;
-    }
+    .navbar {}
 }
 
 @media screen and (min-width: 768px) {
-    .navbar {
-        padding: 1rem 1.5rem;
-    }
+    .navbar {}
 }
 
 @media screen and (min-width: 992px) {
     .navbar {
-        padding: 1.2rem 3rem;
+        flex-direction: row;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .navbar {
-        padding: 1.5rem 3rem;
+        flex-direction: row;
     }
 }
 
@@ -328,23 +336,19 @@ h4 {
 */
 
 @media screen and (min-width: 576px) {
-    .jumbotron {
-    }
+    .jumbotron {}
 }
 
 @media screen and (min-width: 768px) {
-    .jumbotron {
-    }
+    .jumbotron {}
 }
 
 @media screen and (min-width: 992px) {
-    .jumbotron {
-    }
+    .jumbotron {}
 }
 
 @media screen and (min-width: 1200px) {
-    .jumbotron {
-    }
+    .jumbotron {}
 }
 
 .jumbotron.top {
@@ -359,6 +363,14 @@ h4 {
 .hero {
     font-size: 3rem;
     font-weight: 700;
+}
+
+.dark a {
+    color: #ff9100;
+}
+
+.dark a:visited {
+    color: #e7bd32;
 }
 
 /* 
@@ -407,10 +419,20 @@ pre.code-block {
     padding: 1rem;
 }
 
+.dark pre.code-block {
+    background: #000;
+    color: rgb(241, 191, 81);
+}
+
 code {
     background: #cfcfff;
     font-family: 'Fira Code', 'Lucida Console', monospace;
     font-size: .65rem;
+}
+
+.dark code {
+    background: #000;
+    color: rgb(241, 191, 81);
 }
 
 /* 
