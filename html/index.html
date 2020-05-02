@@ -16,8 +16,10 @@
         -->
     <nav class="navbar fixed">
         <a href="#top-section">Top</a>|
-        <a href="#html-basics">HTML Basics</a>
+        <a href="#html-basics">HTML Basics</a>|
+        <a href="#css-basics">CSS Basics</a>|
     </nav>
+
     <section class="jumbotron top dark" id="top-section">
         <div class="container d-flex flex-column">
             <header class="section-header">
@@ -26,8 +28,9 @@
             </header>
         </div>
     </section>
+
     <section class="jumbotron" id="html-basics">
-        <div class="container">
+        <div class="container clearfix">
             <header class="section-header">
                 <h1>HTML basics</h1>
                 <p>HTML is a &quot;markup language&quot;. In computer science, a markup language is defined as a
@@ -36,17 +39,68 @@
             <h3>HTML Example:</h3>
             <pre class="code-block"><code class="language-html">&lt;p&gt;This is an example of the usage of paragraph tags in HTML.&lt;/p&gt;
 <span class="comment">&lt; !-- This is an example of an HTML comment. -- &gt;</span></code></pre>
-            <p>HTML was developed in the early 1990s by <a title="wikipedia article about Tim Berners-Lee" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee.</a></p>
+            <p>HTML was developed in the early 1990s by <a title="wikipedia article about Tim Berners-Lee"
+                    href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>, a physicist at <a
+                    href="https://home.cern/">CERN.</a></p>
             <!-- The <picture> element is NOT compatable with IE, but it helps a lot when it comes to responsive images. -->
-            <picture class="image-wrapper">
-                <source srcset="../images/tim-berners-lee-300.jpg" media="(min-width: 768px)" type="image/jpg">
-                <source srcset="../images/tim-berners-lee-400.jpg" media="(min-width: 992px)" type="image/jpg">
-                <img srcset="../images/tim-berners-lee-200.jpg"
-                    alt="photo of Tim Berners-Lee">
-            </picture>
-            
-        </div>
+            <div class="image-wrapper img-one left">
+                <picture>
+                    <source srcset="../images/tim-berners-lee-300.jpg" media="(min-width: 768px)" type="image/jpg">
+                    <source srcset="../images/tim-berners-lee-400.jpg" media="(min-width: 992px)" type="image/jpg">
+                    <img srcset="../images/tim-berners-lee-200.jpg" alt="photo of Tim Berners-Lee">
+                </picture>
+                <p class="img-desc">Tim Berners-Lee (Wikipedia)</p>
+            </div>
+            <p> 
+                HTML (Hypertext Markup Language) can be described as providing &quot;structure&quot; for the document; it is the basic foundation on
+                which all other parts of a website are built.
+            </p>
+            <p>
+                HTML is implemented by placing various tags throughout a document that have both a functional and semantic purpose.  "Block-level" 
+                elements, for example, by default take up the entire space of their parent container, and kick other elements "down" a row; whereas "inline"
+                elements only take up as much space as is bounded by the beginning and end tags of the element.
+            </p>
+            <p>
+                Semantic elements can include those such as <code>&lt;section&gt;</code> and <code>&lt;article&gt;</code>; other than being block level, these two
+                elements have no additional impact on the behavior of the HTML on the page; and are rather used to give the browser, the user, the developer, and search engines
+                a better idea of what is on the page and what the purpose of the element is. 
+            </p>
+            <p>
+                One interesting thing that a person learning HTML and CSS should know is that the
+                (<code>&lt;img&gt;</code>) tag in HTML is actually a &quot;replaced element&quot; &mdash; this means
+                that it is rendered outside of the scope of CSS. Put in simpler terms, replaced elements are elements
+                whose contents are not affected by the current document's styles. The position of
+                the replaced element can be affected using CSS, but not the contents of the replaced element itself.
+                (See MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">Replaced Element</a> page).
+            </p>
+        </div><!-- End container -->
     </section>
+
+    <section class="jumbotron" id="css-basics">
+        <div class="container clearfix">
+            <header class="section-header">
+                <h1>CSS basics</h1>
+                <p>CSS is a declarative style-sheet language that determines the how a webpage "looks" in the browser.</p>
+            </header>
+            <h3>CSS Example:</h3>
+            <pre class="code-block"><code class="language-css">.selector {
+
+    property: &lt;option&gt;&semi;
+
+}
+            </code></pre>
+            <p>CSS (Cascading Style Sheets) are the primary (and preferred) way by which the appearance of a webpage's markup is displayed in the browser.  CSS can be used to improve the readability as well as overall aesthetic appearance of a website.  It is implemented through a huge variety of "selectors", which can be the HTML element itself, a class name, an ID name, and various pseudo-classes.  </p>
+            <div class="image-wrapper img-two right clearfix">
+                <picture>
+                    <source srcset="../images/Hakon-Wium-Lie-300.jpg" media="(min-width: 768px)" type="image/jpg">
+                    <source srcset="../images/Hakon-Wium-Lie-400.jpg" media="(min-width: 992px)" type="image/jpg">
+                    <img srcset="../images/Hakon-Wium-Lie-200.jpg" alt="photo of Hakon Wium Lie">
+                </picture>
+                <p class="img-desc">Hakon Wium Lie (Wikipedia)</p>
+            </div>
+        </div><!-- End container -->
+    </section>
+
 </body>
 
 </html>

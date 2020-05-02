@@ -91,6 +91,10 @@ body {
     font-size: 1.4rem;
 }
 
+p {
+    line-height: 1.9rem;
+}
+
 /* 
     Layout
 
@@ -106,6 +110,14 @@ body {
     I'm doing things this way in part to make it easier to manage in the long run, and in part
     to challenge myself to see how well I can build a responsive layout all on my own.
 */
+
+/* Clearfix Hack -- Yes, I used floats. */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 /* Flexbox */
 
@@ -340,12 +352,9 @@ h4 {
 }
 
 .jumbotron.top {
+    margin-top: 0;
     padding-top: 4rem;
     padding-bottom: 2rem;
-}
-
-.jumbotron.top .section-header {
-    text-align: left;
 }
 
 .jumbotron.dark {
@@ -391,7 +400,6 @@ h4 {
 */
 
 .section-header {
-    text-align: center;
     margin-bottom: 2rem;
 }
 
@@ -402,6 +410,7 @@ h4 {
 pre.code-block {
     /* display: block; */
     background: #cfcfff;
+    margin: 2rem 0;
     padding: 1rem;
 }
 
@@ -442,18 +451,52 @@ code .comment {
     color: #57b33b;
 }
 
-.image-wrapper .img {
+.image-wrapper .img-one .img {
     background-image: url(../images/tim-berners-lee-200.jpg);
 }
 
 @media (min-width: 768px) {
-    .image-wrapper .img {
+    .image-wrapper .img-one .img {
         background-image: url(../images/tim-berners-lee-300.jpg);
     }
 }
 
 @media (min-width: 992px) {
-    .image-wrapper .img {
+    .image-wrapper .img-one .img {
         background-image: url(../images/tim-berners-lee-400.jpg);
     }
+}
+
+.image-wrapper .img-two .img {
+    background-image: url(../images/Hakon-Wium-Lie-200.jpg);
+}
+
+@media (min-width: 768px) {
+    .image-wrapper .img-two .img {
+        background-image: url(../images/Hakon-Wium-Lie-300.jpg);
+    }
+}
+
+@media (min-width: 992px) {
+    .image-wrapper .img-two .img {
+        background-image: url(../images/Hakon-Wium-Lie-400.jpg);
+    }
+}
+
+.image-wrapper {
+    margin: 1rem 0;
+}
+
+.image-wrapper.left {
+    float: left;
+    margin-right: 1rem;
+}
+
+.image-wrapper.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+.img-desc {
+    font-size: 0.9rem;
 }
