@@ -129,18 +129,31 @@
                 <h1>Javascript Basics</h1>
                 <p>
                     Javascript is a "scripting" language. Scripting languages are defined as "mini" programming languages which can
-                    be
-                    executed without being compiled.
+                    be executed without being compiled.
                 </p>
-                <div class="image-wrapper img-three right clearfix">
-                    <picture>
-                        <source srcset="images/Brendan-Eich-300.jpg" media="(min-width: 768px)" type="image/jpg">
-                        <source srcset="images/Brendan-Eich-400.jpg" media="(min-width: 992px)" type="image/jpg">
-                        <img srcset="images/Brendan-Eich-200.jpg" alt="photo of Brendan Eich">
-                    </picture>
-                    <p class="img-desc">Brendan Eich (Wikipedia)</p>
-                </div>
             </header>
+            <h3>JavaScript Example:</h3>
+            <pre class="code-block"><code class="language-javascript">const el = document.querySelector('element') 
+el.addEventListener('click', () =&gt; { ... })
+</code></pre>
+            <a href="https://en.wikipedia.org/wiki/Brendan_Eich">Brendan Eich</a> came up with and supervised the initial implementation of JavaScript while working at Netscape in the early 1990s.
+            <div class="image-wrapper img-three right clearfix">
+                <picture>
+                    <source srcset="images/Brendan-Eich-300.jpg" media="(min-width: 768px)" type="image/jpg">
+                    <source srcset="images/Brendan-Eich-400.jpg" media="(min-width: 992px)" type="image/jpg">
+                    <img srcset="images/Brendan-Eich-200.jpg" alt="photo of Brendan Eich">
+                </picture>
+                <p class="img-desc">Brendan Eich (Wikipedia)</p>
+            </div>
+            <p>
+                Javascript is primarily run on the front-end in a web browser, and is rendered by the browser software.Javascript makes web pages "functional" and interactive.  
+                It can also query servers, validate data, and help manage front-end security.  Unfortunately it is also one of the main sources of security vulnerability.
+            </p>
+            <p>
+                In 2009, <a href="https://en.wikipedia.org/wiki/Ryan_Dahl">Ryan Dahl</a> began writing a version of JavaScript that could run on the back end of web applications, 
+                called <a href="https://nodejs.org/en/">Nodejs</a>.  Node is built on top of <a href="https://www.google.com">Google</a>'s V8 Javascript Engine.  Node allows the 
+                construction of entire web apps, both client and server, with just the use of Javascript.
+            </p>
         </div><!-- End container -->
     </section>
     <script src="scripts/menu.js"></script>
