@@ -3,21 +3,26 @@
 
 <head>
     <title>DGM 1600 Competencies</title>
-    <link rel="stylesheet" href="css/main.css">
+
     <!-- Using a better font because the defaults are ugly -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f8e0f4e45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <!-- 
-            I'm using Bootstrap class names mostly cause I like them and they make sense.
-            I'm not actually using boostrap; I'm doing this all in vanilla HTML/CSS.
-        -->
-    <nav class="navbar d-flex justify-center align-between fixed">
-        <a href="#top-section">Top</a>
-        <a href="#html-basics">HTML Basics</a>
-        <a href="#css-basics">CSS Basics</a>
+        I'm using Bootstrap class names mostly cause I like them and they make sense.
+        I'm not actually using boostrap; I'm doing this all in vanilla HTML/CSS.
+    -->
+    <nav class="navbar fixed d-flex">
+        <i class="fas fa-bars top-hamburger"></i>
+        <div class="menu-items d-flex flex-column justify-center noselect">
+            <a href="#top-section">Top</a>
+            <a href="#html-basics">HTML Basics</a>
+            <a href="#css-basics">CSS Basics</a>
+        </div>
     </nav>
 
     <section class="jumbotron top dark" id="top-section">
@@ -115,7 +120,7 @@
                 </p>
         </div><!-- End container -->
     </section>
-
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>
