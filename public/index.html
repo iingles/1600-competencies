@@ -23,7 +23,7 @@
             <a href="#html-basics">HTML</a>
             <a href="#css-basics">CSS</a>
             <a href="#javascript-basics">JavaScript</a>
-            <a href="#working">All Together</a>
+            <a href="cards.html">Cards</a>
         </div>
     </nav>
 
@@ -119,6 +119,24 @@
                 abhor the use of <code>!important</code> unless absolutely necessary because it can cause many problems down the
                 production pipeline.
             </p>
+            <h2>Working Examples of CSS</h2>
+            <h3>CSS Flex Order</h3>
+            <p>Each item is labelled with its actual order in the HTML.</p>
+            <div class="box-wrapper d-flex flex-row">
+                <div class="box od-2">1</div>
+                <div class="box od-4">2</div>
+                <div class="box od-1">3</div>
+                <div class="box od-3">4</div>
+            </div>
+            <h3>CSS Flex-Grow</h3>
+            <p>Each item has the labelled flex-grow.</p>
+            <div class="box-wrapper d-flex flex-row">
+                <div class="box fg-1">1</div>
+                <div class="box fg-3">3</div>
+                <div class="box fg-4">4</div>
+                <div class="box fg-1">1</div>
+            </div>
+            </div>
         </div><!-- End container -->
     </section>
 
@@ -161,15 +179,7 @@ el.addEventListener('click', () =&gt; { ... })
                 organization called the European Computer Manufacturers Association.
             </p>
         </div><!-- End container -->
-    </section>
-    <section class="jumbotron dark" id="#working">
-        <div class="container">
-            <header class="section-title">
-                <h2>Working Together</h2>
-                <p>Here are a few examples of HTML, CSS, and Javascript working together.</p>
-            </header>
-        </div>
-    </section>
+    </section>    
     <script src="scripts/menu.js"></script>
 </body>
 

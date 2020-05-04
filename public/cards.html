@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DGM 1600 Competencies</title>
+
+    <!-- Using a better font because the defaults are ugly -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f8e0f4e45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- 
+        I'm using Bootstrap class names mostly cause I like them and they make sense.
+        I'm not actually using boostrap; I'm doing this all in vanilla HTML/CSS.
+    -->
+    <nav class="navbar fixed d-flex">
+        <i class="fas fa-bars top-hamburger"></i>
+        <div class="menu-items d-flex flex-column justify-center noselect">
+            <a href="#top-section">Top</a>
+            <a href="index.html/#html-basics">HTML</a>
+            <a href="index.html/#css-basics">CSS</a>
+            <a href="index.html/#javascript-basics">JavaScript</a>
+            <a href="cards.html">Cards</a>
+        </div>
+    </nav>
+
+    <section class="jumbotron dark" id="top-section">
+        <div class="container">
+            <header class="section-header">
+                <h1 class="hero">Working Together</h1>
+                <p>HTML, CSS, and Javascript working together.</p>
+            </header>
+        </div>
+    </section>
+
+    <section class="jumbotron">
+        <button class="btn primary" onclick="createCards()">fetch</button>
+        <div id="cardWrapper" class="d-flex flex-wrap"></div>
+    </section>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/fetchCards.js"></script>
+</body>
+
+</html>
