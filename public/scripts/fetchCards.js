@@ -38,10 +38,10 @@ async function createCards () {
         cardBody.innerHTML =
             
             `
-            Height: ${person.height}
-            Mass: ${person.mass}
-            Hair Color: ${person.hair_color}
-            gender: ${person.gender}
+            <p>Height: ${person.height}</p>
+            <p>Mass: ${person.mass}</p>
+            <p>Hair Color: ${person.hair_color}</p>
+            <p>gender: ${person.gender}</p>
             `
         card.appendChild(cardTitle)
         card.appendChild(cardBody)        
