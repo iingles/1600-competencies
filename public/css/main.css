@@ -649,6 +649,7 @@ code .comment {
     color: #fff;
     font-weight: bold;
     font-size: 1.8rem;
+    border-radius: 6px 6px 0 0;
 }
 
 .card-body {
@@ -657,12 +658,26 @@ code .comment {
     padding: 1rem 2rem;
 }
 
+.card.clickable {
+    transition: background 0.4s;
+    cursor: pointer;
+}
+
+.card.clickable:hover {
+    background: #f1f1f1 radial-gradient(circle, transparent 1%, #f1f1f1 1%) center/15000%;
+}
+
+.card.clickable:active {
+    background-color: #ccc;
+    background-size: 100%;
+    transition: background 0s;
+}
+
 @media screen and (min-width: 768px) {
     #cardWrapper {
         flex-direction: row;
     }
-
-    .card { 
+    .card {
         width: 50%;
         margin: 1rem;
     }

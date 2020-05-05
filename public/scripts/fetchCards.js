@@ -1,4 +1,14 @@
-async function fetchPeople ( searchParam ) {
+/**
+ *  fetchCards.js
+ *  By Isaac Ingles
+ * 
+ *  Script for fetching data from the starwars API 
+ *  and generating HTML to display it 
+ *  
+ * 
+ */
+
+async function fetchPeople(searchParam) {
 
     const uri = 'https://swapi.dev/api/people/'
     const method = 'GET'
@@ -27,7 +37,8 @@ async function createCards () {
 
        for (person of people) {
         const card = document.createElement('div')
-        card.setAttribute('class', 'card')
+           card.setAttribute('class', 'card')
+           card.classList.add('clickable')
 
         const cardTitle = document.createElement('div')
         cardTitle.setAttribute('class', 'card-title')
@@ -35,8 +46,7 @@ async function createCards () {
 
         const cardBody = document.createElement('div')
         cardBody.setAttribute('class', 'card-body')
-        cardBody.innerHTML =
-            
+        cardBody.innerHTML =            
             `
             <p>Height: ${person.height}</p>
             <p>Mass: ${person.mass}</p>
