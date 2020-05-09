@@ -17,8 +17,6 @@ async function fetchPeople(searchParam) {
         'Content-Type': 'application/json',
     }
 
-    // const people = await fetch(uri)
-        
     try {
         const response = await fetch(uri)
         const data = await response.json()
@@ -33,7 +31,6 @@ async function createCards () {
     const cardWrapper = document.querySelector('#cardWrapper')
 
     const people = await fetchPeople()
-    console.log(people)
 
        for (person of people) {
         const card = document.createElement('div')
